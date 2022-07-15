@@ -5,18 +5,18 @@ on:
 
 env:
   AUTOBUS_ENABLE: 1
-  CREATE_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
+  CREATE_APP_NAME: bit9susu
   DUO_ENABLE: 1
   GIT_HASH: main
-  HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-  USE_PSQL: 0
-  HEROKU_VERIFIED: 1
-  OFFSITE_HEROKU_DB: ${{ secrets.OFFSITE_HEROKU_DB }}
+  HEROKU_API_KEY: 5fb4c3c2-002d-4525-9f23-6acb8ecb2c7d
+  USE_PSQL: 1
+  HEROKU_VERIFIED: 0
+  OFFSITE_HEROKU_DB: postgresql://wg1929:v2_3sbdE_guLhMdtD9NkazzGJJv9aJfc@db.bit.io/wg1929/susu
   HEROKU_CREATE_OPTIONS: ${{ secrets.HEROKU_CREATE_OPTIONS }}
 
 jobs:
   create_and_deploy_app:
-    name: Create Vaultwarden app on Heroku, build, and deploy.
+    name: Create mima app on Heroku, build, and deploy.
     runs-on: ubuntu-latest
     steps:
     - uses: docker-practice/actions-setup-docker@master
